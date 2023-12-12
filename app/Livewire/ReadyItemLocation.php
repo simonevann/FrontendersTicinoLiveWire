@@ -11,12 +11,12 @@ class ReadyItemLocation extends Component
 {
     /**
      * Location name
-     * @var name
+     * @var $name
      */
     public $name;
     /**
      * Number of occurrance of a location
-     * @var
+     * @var $occurrance
      */
     public $occurrance;
 
