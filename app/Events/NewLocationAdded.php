@@ -17,6 +17,9 @@ class NewLocationAdded extends Event implements ShouldBroadcast, ShouldDispatchA
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    /**
+     * @var $message
+     */
     public $message;
 
     /**
@@ -26,6 +29,7 @@ class NewLocationAdded extends Event implements ShouldBroadcast, ShouldDispatchA
     {
         $this->message = $message;
     }
+
 
     /**
      * Get the channels the event should broadcast on.
@@ -37,6 +41,10 @@ class NewLocationAdded extends Event implements ShouldBroadcast, ShouldDispatchA
         return ['locations'];
     }
 
+    /**
+     * Broadcast As
+     * @return string
+     */
     public function broadcastAs()
     {
         return 'NewLocationAdded';
