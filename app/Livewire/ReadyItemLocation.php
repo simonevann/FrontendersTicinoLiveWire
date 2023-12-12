@@ -7,7 +7,7 @@ use Livewire\Component;
 class ReadyItemLocation extends Component
 {
     public $name;
-    public $occurance;
+    public $occurrance;
     public function render()
     {
         return view('livewire.ready-item-location');

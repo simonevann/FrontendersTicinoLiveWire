@@ -2,7 +2,7 @@
     @if(count($locations) > 0)
         <ul>
             @foreach ($locations as $location)
-                <li>{{ ucfirst($location->name) }} <div class="tag tag--primary">{{ $location->occurance }}</div></li>
+                <li>{{ ucfirst($location->name) }} <div class="tag tag--primary">{{ $location->occurrance }}</div></li>
             @endforeach
         </ul>
     @else
