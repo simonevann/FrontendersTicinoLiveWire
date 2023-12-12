@@ -6,10 +6,20 @@ use Livewire\Component;
 use App\Models\Locations;
 use App\Events\NewLocationAdded;
 
+/**
+ *
+ */
 class ReadyAddLocations extends Component
 {
+    /**
+     * @var name
+     */
     public $name;
 
+    /**
+     * Add a new locationd
+     * @return void
+     */
     public function addLocation()
     {
         $validated = $this->validate([
@@ -24,6 +34,11 @@ class ReadyAddLocations extends Component
         $this->name = "";
         session()->flash('message', 'Location successfully created.');
     }
+
+    /**
+     * Render the component
+     * @return mixed
+     */
     public function render()
     {
         return view('livewire.ready-add-locations');
